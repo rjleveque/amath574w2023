@@ -1,0 +1,36 @@
+{% extends "!layout.html" %}
+
+
+{% block rootrellink %}
+        <li><a href="{{ pathto('index') }}"><font color="#39275b">Contents</font></a>|&nbsp;</li>
+        <li><a href="{{ pathto('biblio') }}"><font color="#39275b">Bibliography</font></a>|&nbsp;</li>
+        <li><a href="{{ pathto('search') }}"><font color="#39275b">Search</font></a>|&nbsp;</li>
+{% endblock %}
+
+
+{% block relbar1 %}
+
+<div style="background-color: #F0D576; text-align: left; padding: 10px 10px 15px 15px">
+<table>
+<tr>
+<td>
+<a href="http://www.amath.washington.edu/"><img src="{{
+pathto("_static/uwamath.gif", 1) }}" border="0" alt="UW AMath"/></a>
+</td>
+<td>
+<font size=5> Conservation Laws and Finite Volume Methods</font>
+<br>&nbsp;<br>
+<font size=5> Applied Math 574 </font>
+<br>&nbsp;<br>
+<font size=5> Winter Quarter, 2023 </font>
+</td>
+</tr>
+</table>
+</div>
+{{ super() }}
+{% endblock %}
+
+{# put the sidebar before the body #}
+{% block sidebar1 %}{{ sidebar() }}{% endblock %}
+{% block sidebar2 %}{% endblock %}
+
