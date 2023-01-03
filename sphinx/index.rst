@@ -23,20 +23,28 @@ Contents
    examples
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    lectures
+
+.. toctree::
+   :maxdepth: 1
+
    homeworks
 
 .. toctree::
    :maxdepth: 1
 
-   labs/index
+   notebooks
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    python
+
+.. toctree::
+   :maxdepth: 1
+
    class_repos
 
 .. toctree::
