@@ -6,13 +6,15 @@ Course information
 =============================================================
 
 
-Instructor
----------------
+Instructor / Office Hours
+-------------------------
 
 * `Prof. Randall LeVeque <http://faculty.washington.edu/rjl>`_
 
   * Office: Lewis 328 
-  * Office hours:  TBA
+  * Office hours on campus:  MWF 12-1 or by appointment
+  * Office hours on zoom:  Th 10-11 or by appointment, link on 
+    `Canvas page <https://canvas.uw.edu/courses/1611247>`_.
   * netid for email: rjl
 
 

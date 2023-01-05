@@ -1,0 +1,175 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb}
+
+\usepackage{hyperref}  % for urls and hyperlinks
+
+
+\setlength{\textwidth}{6.2in}
+\setlength{\oddsidemargin}{0.3in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9in}
+\setlength{\voffset}{-1in}
+\setlength{\headsep}{26pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+% input some useful macros from RJLmacros.tex:
+\input{RJLmacros}
+
+\begin{document}
+
+\hfill\vbox{\hbox{AMath 574}\hbox{Homework 1}
+\hbox{Due by 11:00pm on January 12, 2023}}
+
+For submission instructions and some additional information, see:
+
+\url{http://faculty.washington.edu/rjl/classes/am574w2023/homework1.html}
+
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf \#1.}
+
+The gas dynamics equations (2.38) are written as conservation laws for the
+mass and momentum, which are conserved quantities. Often the so-called
+``primitive variables'' $p(x,t)=$ pressure and $u(x,t)=$ velocity are more
+natural to use, e.g. in the acoustic equations we consider perturbations of
+$p$ and $u$ modeled by the linear system (2.5), rather than the
+linear system with matrix (2.46) modeling perturbations in mass and momentum.
+
+(a) Starting from (2.38), derive the following nonlinear equations for the
+pressure and velocity:
+\begin{equation}\label{primeqn}
+\begin{split}
+p_t + up_x + \rho P'(\rho) u_x &= 0,\\
+u_t + (1/\rho)p_x + uu_x &= 0.
+\end{split} 
+\end{equation} 
+Note that these equations involve $\rho(x,t)$ which must now be determined
+from $p(x,t)$ using the equation of state, by inverting $p = P(\rho)$ for
+$\rho$ as a function of $p$.  (Exactly what this gives depends on the
+particular equation of state, so you don't need to go farther.)
+
+{\em Hint:} Use for example $(\rho u)_t = \rho_t u + \rho u_t$ in the
+conservation law for momentum and then use the conservation law for
+$\rho_t$, and also note $P(\rho)_x = P'(\rho)\rho_x,$ etc.
+
+(b) The equations (\ref{primeqn}) can be written in the form 
+\[
+q_t(x,t) + A(q(x,t)) q_x(x,t) = 0,
+\]
+a non-conservative nonlinear system.  Determine the matrix $A(q)$ and
+the eigenvalues of the matrix.  
+
+The system is said to be hyperbolic if the matrix is diagonalizable
+with real eigenvalues. Confirm that the resulting condition on
+$P'(\rho)$ (and the eigenvalues) agree with what we found from the
+conservative form (2.38).  
+Also note that if we linearize (\ref{primeqn}) about
+\[
+p\approx p_0,~~ u\approx u_0,~~ \rho P'(\rho) \approx \rho_0
+P'(\rho_0)\equiv K_0,
+\]
+then the linearized equations agree with the acoustics equations (2.50).
+
+{\bf Note:} This gives a nice derivation of the linear acoustics equations,
+but when solving a nonlinear gas dynamics problem it is generally necessary
+to use the conservative form in order to get proper modeling of shock waves
+and other nonlinear phenomena.  Smooth solutions should agree between the
+two formulations.
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+%--------------------------------------------------------------------------
+\newpage
+\vskip 1cm
+\hrule
+{\bf Problem \#2.7 in the book}
+
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf Problem \#2.8 in the book}
+
+{\em Hint:} Read Section 2.13 first and note that when linearizing about a
+constant specific volume $V_0$, the relation (2.102) between $\xi$ and $x$ is
+roughly $\xi = (x-x_0)/V_0$.
+
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf Problem \#3.1(d,e,f) in the book} You might want to do Problem 3.2 first.
+
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf Problem \#3.2 in the book}
+
+You can use Matlab for this one, but I suggest you try writing the program 
+in Python.  A Jupyter notebook with a partial solution can be found in the
+class repository to help get you started.
+
+Note that the module {\tt numpy.linalg} contains an {\tt eig}
+function similar to Matlab.
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+%--------------------------------------------------------------------------
+
+\vskip 1cm
+\hrule
+{\bf Problem \#3.3 in the book}
+
+You do not need to draw the dashed lines of Figure 3.3, just the wedges with
+the correct wave speeds.  Sketch it by hand or e.g. in a Jupyter notebook,
+as you please.
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+% to insert a figure named X.png, you might use this...
+% \hfil\includegraphics[width=4.0in]{X.png}\hfil
+
+%--------------------------------------------------------------------------
+\end{document}
+
