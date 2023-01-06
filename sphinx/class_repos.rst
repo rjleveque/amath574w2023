@@ -57,10 +57,31 @@ create another directory for doing your own work, e.g. ::
     mkdir my574
     export MY574=/full/path/to/my574
 
-Then copy any files you need to this directory before working with them, e.g. ::
+Then copy all files from $AM574 to $MY574, preserving the directory
+structure::
 
-    cp -r $AM574/homeworks/hw1  $MY574/
+    cp -r $AM574/* $MY574/
 
-will recursively copy the directory `hw1`.
+Now you can do anything you want with the files in $MY574 without creating
+any possible conflicts in $AM574.
 
-Then modify the files in the new `hw1` directory.
+For example, you might want to modify the file hw1.tex to include your
+solutions (also changing the filename to include your name for submission)::
+
+    cd $AM574/homeworks/hw1
+    cp hw1.tex hw1_NAME.tex
+    # edit hw1_NAME.tex to add your solutions
+    pdflatex hw1_NAME
+
+and then submit hw1_NAME.pdf.
+
+Later you might want to copy individual files or subdirectories,
+e.g. when homework2 appears you could do::
+
+    cd $AM574
+    git pull
+    cp -r homeworks/hw2 $MY574/homeworks/
+
+Just make sure you don't overwrite something important in $MY574 when doing
+this!
+
