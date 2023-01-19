@@ -1,0 +1,139 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb}
+
+\usepackage{hyperref}  % for urls and hyperlinks
+
+
+\setlength{\textwidth}{6.2in}
+\setlength{\oddsidemargin}{0.3in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9in}
+\setlength{\voffset}{-1in}
+\setlength{\headsep}{26pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+% input some useful macros from RJLmacros.tex:
+\input{../hw1/RJLmacros}
+
+\begin{document}
+
+\hfill\vbox{\hbox{AMath 574}\hbox{Homework 2}
+\hbox{Due by 11:00pm on January 26, 2023}}
+
+For submission instructions, see:
+
+\url{http://faculty.washington.edu/rjl/classes/am574w2023/homework2.html}
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf Problem \#3.4 in the book}
+
+Also sketch the solution in the $x$--$t$ plane, labeling the states that
+appear in the solution. Then show where these states are in the $p$--$u$
+phase plane and how they are connected by eigenvectors.
+
+Note that the script \verb+problem_3_5.py+ was used to generate the figure
+for the next problem and could be simplified for this problem if desired.
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+%--------------------------------------------------------------------------
+
+\vskip 1cm
+\hrule
+{\bf Problem \#3.5 in the book}
+
+The script \verb+problem_3_5.py+ was used to generate this figure:
+
+% you need to run
+%     python problem_3_5.py
+% at the command line to generate the figure inserted here:
+\hfil\includegraphics[width=3.5in]{problem_3_5.png}\hfil
+
+To solve this problem, determine the states $A,~ B, ~ \ldots,~ M$ and also
+the times $t_1,~t_2,~t_3$.  The times can be written in terms of the
+parameters $\rho_0$ and $K_0$, which were not stated in the problem.
+
+For example,
+\[
+A = \bcm 0 \\ 0 \ecm, \quad B = \bcm 1 \\ 0 \ecm, \quad
+C = \bcm 0 \\ 0 \ecm, \quad \ldots
+\]
+
+% Note that bcm and ecm (begin and end centered matrices) are defined in 
+% RJLmacros.tex
+
+{\em Hint:} Another way to think about what happens when waves reflect off
+the boundary is suggested in Section 7.3.3.
+
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+
+%--------------------------------------------------------------------------
+
+\vskip 1cm
+\hrule
+{\bf Problem \#3.8 in the book}
+
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+%--------------------------------------------------------------------------
+
+\vskip 1cm
+\hrule
+{\bf Problem \#4.2 in the book}
+
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+%--------------------------------------------------------------------------
+
+\vskip 1cm
+\hrule
+{\bf Problem \#4.3 in the book}
+
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf Programming Problem.}
+
+This will involve modifying a Jupyter notebook for solving the acoustics equations using Godunov's method and another method.  I will get this posted by Friday 1/20 and will also discuss in class.
+
+
+%--------------------------------------------------------------------------
+
+\end{document}
