@@ -280,7 +280,11 @@ def save_images(images, figsize=(8,6), plotdir='_plots', clobber=True, \
     for frameno,image in enumerate(images):
         fig = imshow_noaxes(image, figsize)
         filename = '%s/%s%s.%s' % (plotdir, fname_base, str(frameno).zfill(5), format)
-        plt.savefig(filename, format=format, **kwargs)
+        #plt.savefig(filename, format=format, **kwargs)
+        if 'dpi' in kwargs.keys():
+            plt.savefig(filename, format=format, dpi=kwargs['dpi'])
+        else:
+            plt.savefig(filename, format=format)
         plt.close(fig)
         if verbose:
             print("Saved ",filename)
