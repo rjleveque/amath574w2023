@@ -13,7 +13,7 @@ See
 
 Some notebooks will be available in `$AM574/notebooks`:
 
- - To appear.
+ - `acoustics_godunov.ipynb <_static/acoustics_godunov.html>`_
 
 Running notebooks on your computer
 ----------------------------------
