@@ -21,6 +21,7 @@
 \begin{document}
 
 \hfill\vbox{\hbox{AMath 574}\hbox{Homework 2}
+\hbox{Updated 1/21/23 to include final problem}
 \hbox{Due by 11:00pm on January 26, 2023}}
 
 For submission instructions, see:
@@ -131,7 +132,53 @@ the boundary is suggested in Section 7.3.3.
 \hrule
 {\bf Programming Problem.}
 
-This will involve modifying a Jupyter notebook for solving the acoustics equations using Godunov's method and another method.  I will get this posted by Friday 1/20 and will also discuss in class.
+The notebook in the class repository at 
+{\tt \$AM574/notebooks/acoustics\_godunov.ipynb}
+has been updated since class on 1/20 to make it a bit easier to modify for
+this problem.  Please make sure you ``git pull'' to get the latest version.
+And please contact me if you are having problems with Jupyter of Python!
+We will do more with this same notebook in future homeworks.
+
+\vskip 10pt
+(a) Implement a new function {\tt LxF\_step} similar to {\tt Godunov\_step}
+that takes a single step with the Lax-Friedrichs methods (for the same
+acoustics system):  
+\[
+\qinp =  \qin - \frac{\Dt}{2\Dx} A(\qipn-\qimn)
+\]
+
+Since {\tt Pn} and {\tt Un} are separate arrays, you
+will have to implement the matrix-vector products implied in Lax-Friedrichs
+componentwise.  
+
+You might want to test with Courant number 1 first when debugging.
+
+Submit your notebook that contains the implementation and also does at least
+the experiment described in part (b) below. You can include other tests too
+if you want.
+
+
+\vskip 10pt
+(b) When you do the following experiment:
+
+\hfil\includegraphics[width=6.0in]{input.png}\hfil
+
+you should get plots like theese:
+
+\hfil\includegraphics[width=3.5in]{plot1.png}\hfil
+
+\vskip 10pt
+\hfil\includegraphics[width=3.5in]{plot2.png}\hfil
+
+Explain why there are always two adjacent points with exactly the same
+value, for this particular choice of initial data.
+
+\vskip 10pt
+Note that that I inserted {\tt savefig} commands in the input to create the
+png files used here.
+
+See \url{https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html}
+for more about this command.
 
 
 %--------------------------------------------------------------------------
