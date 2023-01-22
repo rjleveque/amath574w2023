@@ -36,10 +36,7 @@ Contents
    :maxdepth: 1
 
    notebooks
-
-.. toctree::
-   :maxdepth: 1
-
+   clawpack
    python
 
 .. toctree::
