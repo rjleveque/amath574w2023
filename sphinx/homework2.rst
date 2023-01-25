@@ -6,7 +6,7 @@ Homework 2
 =============================================================
 
 - `hw2.pdf <_static/hw2.pdf>`_ (updated 1/21/23 to include programming
-  problem)
+  problem, and 1/25/23 to fix def'n of Lax-Friedrichs)
 
 The homework is due by 11:00pm PDT on January 26, 2023.  You can turn it in
 up to 24 hours late with a 10% reduction in credit.  
