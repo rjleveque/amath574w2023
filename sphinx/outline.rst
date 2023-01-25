@@ -46,8 +46,6 @@ Schedule (tentative)
 
   - High resolution methods, TVD, limiters
   - Chapter 6 of [FVMHP]_.
-  - Multi-dimensional hyperbolic problems
-  - Chapters 18-20 of [FVMHP]_.
 
 - **Week 5:**
 

@@ -29,11 +29,11 @@ open a terminal and give this command::
 
 This may take a while to install since it compiles some Fortran code.
 
-This should create a new directory `$HOME/clawpack_src/clawpack-v5.9.0` and
+This should create a new directory `$HOME/clawpack_src/clawpack-v5-9-0` and
 for running Fortran codes later (and for the purposes of these instructions)
 we set an environment variable to point to this directory::
 
-    export CLAW=$HOME/clawpack_src/clawpack-v5.9.0
+    export CLAW=$HOME/clawpack_src/clawpack-v5-9-0
 
 Clawpack includes a useful utility to test whether clawpack can be imported
 in Python and what version of clawpack it's using, if you happen to have
