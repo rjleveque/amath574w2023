@@ -22,6 +22,7 @@
 
 \hfill\vbox{\hbox{AMath 574}\hbox{Homework 2}
 \hbox{Updated 1/21/23 to include final problem}
+\hbox{Updated 1/25/23 to fix Lax-Friedrichs formula}
 \hbox{Due by 11:00pm on January 26, 2023}}
 
 For submission instructions, see:
@@ -144,7 +145,7 @@ We will do more with this same notebook in future homeworks.
 that takes a single step with the Lax-Friedrichs methods (for the same
 acoustics system):  
 \[
-\qinp =  \qin - \frac{\Dt}{2\Dx} A(\qipn-\qimn)
+\qinp =  \half(\qimn + \qipn) - \frac{\Dt}{2\Dx} A(\qipn-\qimn)
 \]
 
 Since {\tt Pn} and {\tt Un} are separate arrays, you
