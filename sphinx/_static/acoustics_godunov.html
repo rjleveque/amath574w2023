@@ -14752,12 +14752,12 @@ It should work regardless of the number of grid cells in the arrays (provided <c
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Godunov_step</span><span class="p">(</span><span class="n">Pn</span><span class="p">,</span><span class="n">Un</span><span class="p">,</span><span class="n">tn</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Godunov_step</span><span class="p">(</span><span class="n">Pn</span><span class="p">,</span><span class="n">Un</span><span class="p">,</span><span class="n">dt</span><span class="p">):</span>
     <span class="c1"># initialize new cell averages at n+1 to old ones at n:</span>
     <span class="c1"># important to make a copy so we can modify without change old values!</span>
     <span class="n">Pnp</span> <span class="o">=</span> <span class="n">Pn</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="n">Unp</span> <span class="o">=</span> <span class="n">Un</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-
+    
     <span class="c1"># fill ghost cells for periodic BCs:</span>
     <span class="c1"># fill at t_n so these values can be used in computing updates</span>
     <span class="n">Pn</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">Pn</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
@@ -15220,7 +15220,7 @@ class="
 <span class="n">Un</span> <span class="o">=</span> <span class="n">U0</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
 <span class="n">nsteps</span> <span class="o">=</span> <span class="mi">40</span>
-<span class="n">nplot</span> <span class="o">=</span> <span class="mf">4.</span>  <span class="c1"># how frequently to produce a plot</span>
+<span class="n">nplot</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># how frequently to produce a plot</span>
 <span class="n">figs</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># to accumulate figures for animation</span>
 
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nsteps</span><span class="p">):</span>
@@ -15232,7 +15232,7 @@ class="
         <span class="n">close</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">nsteps</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
         <span class="c1"># take the next step</span>
-        <span class="n">Pn</span><span class="p">,</span> <span class="n">Un</span> <span class="o">=</span> <span class="n">Godunov_step</span><span class="p">(</span><span class="n">Pn</span><span class="p">,</span><span class="n">Un</span><span class="p">,</span><span class="n">tn</span><span class="p">)</span>
+        <span class="n">Pn</span><span class="p">,</span> <span class="n">Un</span> <span class="o">=</span> <span class="n">Godunov_step</span><span class="p">(</span><span class="n">Pn</span><span class="p">,</span><span class="n">Un</span><span class="p">,</span><span class="n">dt</span><span class="p">)</span>
 
 
 <span class="n">anim</span> <span class="o">=</span> <span class="n">animation_tools</span><span class="o">.</span><span class="n">animate_figs</span><span class="p">(</span><span class="n">figs</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -15442,42 +15442,42 @@ input[type=range].anim-slider {
 </style>
 
 <div class="animation">
-  <img id="_anim_img5928bbe4a8694c2a989673ac3586d8d0">
+  <img id="_anim_img03e94981803945f09e435fd5d54025be">
   <div class="anim-controls">
-    <input id="_anim_slider5928bbe4a8694c2a989673ac3586d8d0" type="range" class="anim-slider"
+    <input id="_anim_slider03e94981803945f09e435fd5d54025be" type="range" class="anim-slider"
            name="points" min="0" max="1" step="1" value="0"
-           oninput="anim5928bbe4a8694c2a989673ac3586d8d0.set_frame(parseInt(this.value));">
+           oninput="anim03e94981803945f09e435fd5d54025be.set_frame(parseInt(this.value));">
     <div class="anim-buttons">
-      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim5928bbe4a8694c2a989673ac3586d8d0.slower()">
+      <button title="Decrease speed" aria-label="Decrease speed" onclick="anim03e94981803945f09e435fd5d54025be.slower()">
           <i class="fa fa-minus"></i></button>
-      <button title="First frame" aria-label="First frame" onclick="anim5928bbe4a8694c2a989673ac3586d8d0.first_frame()">
+      <button title="First frame" aria-label="First frame" onclick="anim03e94981803945f09e435fd5d54025be.first_frame()">
         <i class="fa fa-fast-backward"></i></button>
-      <button title="Previous frame" aria-label="Previous frame" onclick="anim5928bbe4a8694c2a989673ac3586d8d0.previous_frame()">
+      <button title="Previous frame" aria-label="Previous frame" onclick="anim03e94981803945f09e435fd5d54025be.previous_frame()">
           <i class="fa fa-step-backward"></i></button>
-      <button title="Play backwards" aria-label="Play backwards" onclick="anim5928bbe4a8694c2a989673ac3586d8d0.reverse_animation()">
+      <button title="Play backwards" aria-label="Play backwards" onclick="anim03e94981803945f09e435fd5d54025be.reverse_animation()">
           <i class="fa fa-play fa-flip-horizontal"></i></button>
-      <button title="Pause" aria-label="Pause" onclick="anim5928bbe4a8694c2a989673ac3586d8d0.pause_animation()">
+      <button title="Pause" aria-label="Pause" onclick="anim03e94981803945f09e435fd5d54025be.pause_animation()">
           <i class="fa fa-pause"></i></button>
-      <button title="Play" aria-label="Play" onclick="anim5928bbe4a8694c2a989673ac3586d8d0.play_animation()">
+      <button title="Play" aria-label="Play" onclick="anim03e94981803945f09e435fd5d54025be.play_animation()">
           <i class="fa fa-play"></i></button>
-      <button title="Next frame" aria-label="Next frame" onclick="anim5928bbe4a8694c2a989673ac3586d8d0.next_frame()">
+      <button title="Next frame" aria-label="Next frame" onclick="anim03e94981803945f09e435fd5d54025be.next_frame()">
           <i class="fa fa-step-forward"></i></button>
-      <button title="Last frame" aria-label="Last frame" onclick="anim5928bbe4a8694c2a989673ac3586d8d0.last_frame()">
+      <button title="Last frame" aria-label="Last frame" onclick="anim03e94981803945f09e435fd5d54025be.last_frame()">
           <i class="fa fa-fast-forward"></i></button>
-      <button title="Increase speed" aria-label="Increase speed" onclick="anim5928bbe4a8694c2a989673ac3586d8d0.faster()">
+      <button title="Increase speed" aria-label="Increase speed" onclick="anim03e94981803945f09e435fd5d54025be.faster()">
           <i class="fa fa-plus"></i></button>
     </div>
-    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select5928bbe4a8694c2a989673ac3586d8d0"
+    <form title="Repetition mode" aria-label="Repetition mode" action="#n" name="_anim_loop_select03e94981803945f09e435fd5d54025be"
           class="anim-state">
-      <input type="radio" name="state" value="once" id="_anim_radio1_5928bbe4a8694c2a989673ac3586d8d0"
+      <input type="radio" name="state" value="once" id="_anim_radio1_03e94981803945f09e435fd5d54025be"
              >
-      <label for="_anim_radio1_5928bbe4a8694c2a989673ac3586d8d0">Once</label>
-      <input type="radio" name="state" value="loop" id="_anim_radio2_5928bbe4a8694c2a989673ac3586d8d0"
+      <label for="_anim_radio1_03e94981803945f09e435fd5d54025be">Once</label>
+      <input type="radio" name="state" value="loop" id="_anim_radio2_03e94981803945f09e435fd5d54025be"
              checked>
-      <label for="_anim_radio2_5928bbe4a8694c2a989673ac3586d8d0">Loop</label>
-      <input type="radio" name="state" value="reflect" id="_anim_radio3_5928bbe4a8694c2a989673ac3586d8d0"
+      <label for="_anim_radio2_03e94981803945f09e435fd5d54025be">Loop</label>
+      <input type="radio" name="state" value="reflect" id="_anim_radio3_03e94981803945f09e435fd5d54025be"
              >
-      <label for="_anim_radio3_5928bbe4a8694c2a989673ac3586d8d0">Reflect</label>
+      <label for="_anim_radio3_03e94981803945f09e435fd5d54025be">Reflect</label>
     </form>
   </div>
 </div>
@@ -15487,9 +15487,9 @@ input[type=range].anim-slider {
   /* Instantiate the Animation class. */
   /* The IDs given should match those used in the template above. */
   (function() {
-    var img_id = "_anim_img5928bbe4a8694c2a989673ac3586d8d0";
-    var slider_id = "_anim_slider5928bbe4a8694c2a989673ac3586d8d0";
-    var loop_select_id = "_anim_loop_select5928bbe4a8694c2a989673ac3586d8d0";
+    var img_id = "_anim_img03e94981803945f09e435fd5d54025be";
+    var slider_id = "_anim_slider03e94981803945f09e435fd5d54025be";
+    var loop_select_id = "_anim_loop_select03e94981803945f09e435fd5d54025be";
     var frames = new Array(10);
     
   frames[0] = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90\
@@ -22813,7 +22813,7 @@ AABJRU5ErkJggg==\
     /* set a timeout to make sure all the above elements are created before
        the object is initialized. */
     setTimeout(function() {
-        anim5928bbe4a8694c2a989673ac3586d8d0 = new Animation(frames, img_id, slider_id, 200.0,
+        anim03e94981803945f09e435fd5d54025be = new Animation(frames, img_id, slider_id, 200.0,
                                  loop_select_id);
     }, 0);
   })()
