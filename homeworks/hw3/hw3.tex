@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb}
+
+%\usepackage{hyperref}  % for urls and hyperlinks
+% better colors:
+\usepackage{color}
+\definecolor{darkgreen}{rgb}{0.1,0.5,0.1}
+\definecolor{darkblue}{rgb}{0.2,0.2,1.0}
+\usepackage[colorlinks=true,linkcolor=darkblue,citecolor=darkblue,
+            filecolor=darkblue,urlcolor=darkgreen]{hyperref}
+
+
+\setlength{\textwidth}{6.2in}
+\setlength{\oddsidemargin}{0.3in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9in}
+\setlength{\voffset}{-1in}
+\setlength{\headsep}{26pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+% input some useful macros from RJLmacros.tex:
+\input{../hw1/RJLmacros}
+
+\begin{document}
+
+\hfill\vbox{\hbox{AMath 574}\hbox{Homework 3}
+\hbox{Due by 11:00pm on February 2, 2023}}
+
+For submission instructions, see:
+
+\url{http://faculty.washington.edu/rjl/classes/am574w2023/homework3.html}
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf Problem \#6.1 in the book}
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf Problem \#6.4 in the book} 
+
+Note that this is for the Cauchy problem, so there are infinitely many cells, but you can assume the total variation of $q(x)$ is finite.  In the definition (6.19) referred to in the hint, ``sup'' stands for supremum and this just means the maximum in the case where this value might not actually be attained for any finite $N$ (so $TV(q)$ is the least upper bound on the sum over all choices of $N$ points).  For example, a function with infinitely many oscillations but with exponentially decaying amplitude would have finite TV,  but for any finite $N$ the sum in (6.19) would be strictly less than $TV(q)$.
+
+To make this problem a bit easier without changing the main point, it is fine to suppose we are just on a finite interval (or on the full real line but for functions that are identically constant outside of some finite interval).  Then the hint in the problem suggests a finite number of points to consider.  You might also want to first consider the case where $q(x)$ is continuous, and choose points suggested by the mean value theorem.
+
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf Problem \#6.7 in the book}
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf Problem \#8.1 in the book}
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf Problem \#8.9 in the book}
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf Problem \#7.2 in the book}
+
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+%--------------------------------------------------------------------------
+\vskip 1cm
+\hrule
+{\bf Problem \#7.3 in the book}
+
+Note that you can view the Clawpack solution to this problem in the Clawpack gallery of examples from {\tt \$CLAW/apps/fvmbook}, at
+
+\url{http://www.clawpack.org/gallery/gallery/gallery_fvmbook.html}.
+
+Plots for this particular example can be viewed \href{http://www.clawpack.org/gallery/_static/apps/fvmbook/chap7/standing/_plots/_PlotIndex.html}{here}.
+
+The first part of the problem can be done by viewing these plots and explaining the results.
+
+The second part requires changing the boundary condition in the Clawpack code, and for this please let me know if you are having problems installing or using Clawpack.  Only one line of the {\tt setrun.py} file needs to be changed, so the main point of this exercise is to get Clawpack working.
+
+I cleaned up the code for this example a bit, so you should get the most recent version by doing a ``git pull'' from the {\tt am574} branch of my fork, as described in the video on installing Clawpack ({\tt Clawpack01}).
+
+Also note that Clawpack has changed since the book was written, and parameters are now set in the Python script `setrun.py` rather than in the `.data` file mentioned in the problem. For extrapolation BCs you can set \\
+{\tt clawdata.bc\_upper[0] = 'extrap'}
+
+Please read Section 7.2.1 about these boundary conditions.
+
+Note also that this code is set up to use\\
+{\tt clawdata.cfl\_desired = 1.0}\\
+so that even the upwind method is ``exact'' for the acoustics equations, so you are seeing a good representation of how the acoustics solution should behave with these BCs.
+
+In addition to describing the behavior, please also include the png files from a couple frames you computed at interesting times in relation to your description.  Note that if you do \\
+{\tt make .plots} \\
+in this directory then the {\tt \_plots} directory contains png files of the plots at each output frame.
+ 
+% uncomment the next two lines if you want to insert solution...
+%\vskip 1cm
+%{\bf Solution:}
+
+% insert your solution here!
+
+
+
+
+\end{document}
