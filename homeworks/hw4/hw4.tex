@@ -27,6 +27,7 @@
 \begin{document}
 
 \hfill\vbox{\hbox{AMath 574}\hbox{Homework 4}
+\hbox{Updated 2/2/23 with programming problem}
 \hbox{Due by 11:00pm on February 9, 2023}}
 
 For submission instructions, see:
@@ -114,7 +115,40 @@ For submission instructions, see:
 %--------------------------------------------------------------------------
 \vskip 1cm
 \hrule
-{\bf Programming Problem.}  To appear.
+{\bf Programming Problem.}  
+
+The notebook {\tt \$AM574/notebooks/advection\_highres.ipynb} illustrates an
+implementation of Lax-Wendroff and some high-resolution limiters method for
+advection, using the wave propagation form that can be generalized to other
+problems. A rendered version can be viewed at \url{http://faculty.washington.edu/rjl/classes/am574w2023/_static/advection_highres.html}
+
+The notebook {\tt \$AM574/homework/hw4/scalar\_highres.ipynb} is a similar notebook
+for a more general scalar conservation law, but so far it only implements
+the first order Godunov method (with or without the entropy fix for transonic
+rarefaction waves).  A rendered version can be viewed at \url{http://faculty.washington.edu/rjl/classes/am574w2023/_static/scalar_highres.html}
+
+Following the approach used in the advection notebook, update the scalar
+notebook to include Lax-Wendroff and the minmod limiter methods.
+
+Also add the MC limiter as another option.
+
+Test your code on the examples in the notebook, many of which do not produce
+plots currently.  Note that the animations at the end of the notebook are
+the ones that I used in lecture FVMHP14 for Monday 2/6/23.  The static plots
+produced earlier are the same examples but at fixed times (in case you have
+problems with the animations).  So you might want to rewatch the end of that
+video to see what plots are expected in each case.
+
+As an additional test, try modifying the code in the notebook to solve the
+scalar problem from \#11.5 in the book with $f(q) = \exp(q)$, and for initial
+data
+\[
+q(x,0) = \bpwdef 0 \when x<0.5 \\
+                 5 \when x \geq 0.5 \epwdef
+\]
+on the domain $0\leq x \leq 1$ up to time $t = 0.03$. Check that the numerical solution with the minmod method agrees well with the Osher solution for this case by plotting them together.  Use the same grid with 50 cells but note that you will need to choose an appropriate time step for the method to be stable.
+
+Also note that this problem has no sonic point, so you should set {\tt efix = False} and then {\tt qsonic} could be set to anything.
 
 % uncomment the next two lines if you want to insert solution...
 %\vskip 1cm

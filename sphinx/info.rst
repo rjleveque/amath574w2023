@@ -60,6 +60,9 @@ The primary text book for the class is
   <http://faculty.washington.edu/rjl/book.html>`_, 
   Cambridge University Press, 2002.
 
+Check the `errata <http://faculty.washington.edu/rjl/book2/errata.html>`_
+for some corrections!
+
 We will also use
 
 - [RPJS] D. I. Ketcheson, R. J. LeVeque, and M. J. del Razo,

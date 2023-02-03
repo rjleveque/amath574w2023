@@ -10,6 +10,12 @@ Homework 4
 The homework is due by 11:00pm PDT on February 9, 2023.  You can turn it in
 up to 24 hours late with a 10% reduction in credit.  
 
+The assignment was updated 2/2/23 with the programming project. Rendered
+versions of the notebooks mentioned can be viewed at
+
+ - `advection_highres.html <_static/advection_highres.html>`_
+ - `scalar_highres.html <_static/scalar_highres.html>`_
+
 
 The latex file for this homework assignment is in the :ref:`class_repos` in the
 directory `$AM574/homeworks/hw4`.  You are encouraged to use latex to do the

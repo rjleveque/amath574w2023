@@ -14,7 +14,7 @@ up to 24 hours late with a 10% reduction in credit.
 The Jupyter notebook required as a starting point is in the class repository,
 and you can also view a rendered version here:
 
- - `acoustics_godunov.ipynb <_static/acoustics_godunov.html>`_
+ - `acoustics_godunov.html <_static/acoustics_godunov.html>`_
 
 The latex file for this homework assignment is in the :ref:`class_repos` in the
 directory `$AM574/homeworks/hw2`.  You are encouraged to use latex to do the
