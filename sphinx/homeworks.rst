@@ -3,7 +3,7 @@
 .. _homeworks:
 
 =============================================================
-Homework
+Homework and midterm
 =============================================================
 
 
@@ -22,14 +22,14 @@ Schedule (tentative)
 * :ref:`homework2` due Thursday, Jan. 26
 * :ref:`homework3` due Thursday, Feb. 2
 * :ref:`homework4` due Thursday, Feb. 9
-* midterm on Wednesday, Feb. 15 (week 7)
+* :ref:`midterm` on Wednesday, Feb. 15 (week 7)
 * homework 5 due Thursday, Feb. 23
 * homework 6 due Thursday, March 9
 
 Midterm
 -------
 
-There will be a midterm exam, tentatively scheduled for February 15.  
+There will be an in-class :ref:`midterm` exam on February 15, 2023.  
 The exam will be open book, open notes.  The goal will be to
 insure that you are proficient with some of the theory and algorithms
 presented in the course.   

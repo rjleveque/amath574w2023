@@ -54,15 +54,31 @@ Schedule (tentative)
 
 - **Week 6:**
 
+  - Nonlinear scalar methods, entropy, convergence
+  - Chapters 11-12 of [FVMHP]_.
 
 - **Week 7:**
 
+  - *Wednesday, February 15:* Midterm in class
+  - Nonlinear systems, Hugoniot locus and integral curves
+  - Chapter 13 of [FVMHP]_.
 
 - **Week 8:**
 
   - *Monday, February 20:*  Presidents' Day -- No class
+  - Gas dynamics
+  - FV methods for nonlinear systems
+  - Chapters 14-15 of [FVMHP]_.
 
 - **Week 9:**
 
+  - FV methods for nonlinear systems, approximate Riemann solvers
+  - Hyperbolic problems in two space dimensions
+  - Chapters 15,19 of [FVMHP]_.
+
 - **Week 10:**
+
+  - Hyperbolic problems in two space dimensions
+  - Other applications
+  - Chapters 20-21 of [FVMHP]_.
 
