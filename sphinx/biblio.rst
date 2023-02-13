@@ -16,6 +16,12 @@ access by using the `UW library off-campus proxy
 Hyperbolic problems and finite volume methods
 ---------------------------------------------
 
+.. [Hesthaven] J. S. Hesthaven, `Numerical Methods for Conservation Laws,
+   From Analysis to Algorithms,
+   <https://my.siam.org/Store/Product/viewproduct/?ProductId=29215808>`_
+   SIAM, 2018.
+   `ebook <https://epubs.siam.org/doi/pdf/10.1137/1.9781611975109.fm>`_
+
 .. [Kroener] D. Kröner, 
    `Numerical Schemes for Conservation Laws <http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471967939.html>`_, 
    Wiley, 1997, 
@@ -32,6 +38,20 @@ Hyperbolic problems and finite volume methods
 .. [Trangenstein] J. A. Trangenstein, `Numerical Solution of Hyperbolic
    Partial Differential Equations <http://www.cambridge.org/catalogue/catalogue.asp?isbn=9780521877275>`_
    Cambridge Univesity Press.
+
+.. _biblio_entropy:
+
+Entropy
+-------
+
+.. [OsherChakravarthy] S. Osher, S. Chakravarthy, High Resolution Schemes
+   and the Entropy Condition`, SIAM J. Numer. Analy. 21 (1984),
+   https://doi.org/10.1137/0721060
+
+.. [Tadmor] E. Tadmor,  Entropy stability theory for difference
+   approximations of nonlinear conservation laws and related time-dependent
+   problems, Acta Numerica 31 (2003), pp. 451-512.
+   https://doi.org/10.1017/S0962492902000156
 
 .. _biblio_python:
 
