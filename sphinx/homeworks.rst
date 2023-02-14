@@ -23,7 +23,7 @@ Schedule (tentative)
 * :ref:`homework3` due Thursday, Feb. 2
 * :ref:`homework4` due Thursday, Feb. 9
 * :ref:`midterm` on Wednesday, Feb. 15 (week 7)
-* homework 5 due Thursday, Feb. 23
+* :ref:`homework5` due Thursday, Feb. 23
 * homework 6 due Thursday, March 9
 
 Midterm
