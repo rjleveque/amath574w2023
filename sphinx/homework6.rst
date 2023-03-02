@@ -9,7 +9,8 @@ Homework 6
   `$AM574/homeworks/hw6/hw6A.ipynb`
 - `hw6B.html <_static/hw6B.html>`_ Rendered version of notebook
   `$AM574/homeworks/hw6/pysystem/hw6B.ipynb`
-- `hw6C.html <_static/hw6C.html>`_ To appear.
+- `hw6C.html <_static/hw6C.html>`_ Rendered version of notebook
+  `$AM574/homeworks/hw6/radialdam/hw6C.ipynb`
 
 The homework is due by 11:00pm PDT on March 10, 2023.  You can turn it in
 up to 24 hours late with a 10% reduction in credit.  
