@@ -14730,7 +14730,7 @@ Show that both characteristic families are genuinely nonlinear.</p>
 <h4 id="Solution:">Solution:<a class="anchor-link" href="#Solution:">&#182;</a></h4>$$
 f(q) = \begin{bmatrix} -u \\ a^2/v \end{bmatrix}, \quad\quad 
 f'(q) = \begin{bmatrix} 0 &amp; -1 \\ -a^2/v^2 &amp; 0 \end{bmatrix}
-$$<p>The eigenvalues and eigenvectors are:
+$$<p>The eigenvalues and eigenvectors are (assuming we choose $a&gt;0$):
 $$
 \lambda^1 = -a/v, \quad r^1 = \begin{bmatrix} v\\a \end{bmatrix},
 $$
@@ -14740,12 +14740,12 @@ $$
 $$</p>
 <p>To check the fields are genuinely nonlinear, we calculate</p>
 $$
-\nabla \lambda^1 = \begin{bmatrix} a/2v^2\\ 0 \end{bmatrix},
-\quad \nabla \lambda^1 \cdot r^1 = \frac{a^2}{2v^2} &gt; 0 ~~\text{for all}~v&gt;0,
+\nabla \lambda^1 = \begin{bmatrix} a/v^2\\ 0 \end{bmatrix},
+\quad \nabla \lambda^1 \cdot r^1 = \frac{a}{v} &gt; 0 ~~\text{for all}~v&gt;0,
 $$<p>and
 $$
-\nabla \lambda^2 = \begin{bmatrix} -a/2v^2\\ 0 \end{bmatrix},
-\quad \nabla \lambda^2 \cdot r^2 = \frac{-a^2}{2v^2} &lt; 0 ~~\text{for all}~v&gt;0,
+\nabla \lambda^2 = \begin{bmatrix} -a/v^2\\ 0 \end{bmatrix},
+\quad \nabla \lambda^2 \cdot r^2 = \frac{-a}{v} &lt; 0 ~~\text{for all}~v&gt;0,
 $$</p>
 <p>Note that $\lambda^1$ increases with $v$, while $\lambda^2$ decreases as $v$ increases.</p>
 
@@ -15284,6 +15284,57 @@ fsolve solution vm = 2.61803
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>For the data given above we can also explicitly compute that $v_m = \left(3+\sqrt{5}\right)/2$.</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>2.618033988749895</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>How far is this from the correct solution with two rarefaction waves?</p>
 <p>$u_m$ is correct (by symmetry), but $v_m$ is off by this much:</p>
 
@@ -15295,7 +15346,7 @@ fsolve solution vm = 2.61803
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;vm_shock - vm_rare = </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">vm_shock</span><span class="o">-</span><span class="n">vm_rare</span><span class="p">))</span>
@@ -15344,7 +15395,7 @@ fsolve solution vm = 2.61803
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="n">vl</span><span class="p">,</span><span class="n">vm</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
@@ -15421,7 +15472,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="n">vl</span><span class="p">,</span><span class="n">vm_rare</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
