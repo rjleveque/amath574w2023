@@ -50,6 +50,8 @@ would be most valuable but not required.
 
 Experience with using git and GitHub would also be useful, but not required.
 
+.. _info_text:
+
 Textbook
 --------
 
