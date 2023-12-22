@@ -11,9 +11,15 @@ See
  - :ref:`python` for links to general Python documentatation and resources.
 
 
-Some notebooks will be available in `$AM574/notebooks`:
+Some notebooks are available in `$AM574/notebooks`.  Here are rendered
+versions:
 
+ - `advection_upwind.ipynb <_static/advection_upwind.html>`_
  - `acoustics_godunov.ipynb <_static/acoustics_godunov.html>`_
+ - `Conservation_form.ipynb <_static/Conservation_form.html>`_
+ - `advection_highres.ipynb <_static/advection_highres.html>`_
+
+
 
 Running notebooks on your computer
 ----------------------------------
